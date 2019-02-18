@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/index.css"/>
+  <title>Predict Wildfire Intensity</title>
+</head>
+<body>
+  <h1>Wildfire Predictor</h1>
+  <div id="map"></div>
+  <div id="help-message">
+    Please select a point on the map to retrieve Watson's intensity prediction.
+  </div>
+  <div id="ml">
+    <div id="ml-input">
+      <div id="ml-input-lat" class="ml-input-coord">
+        <label>Lat:</label>
+        <div id="txtLat">
+          Lat
+        </div>
+      </div>
+      <div id="ml-input-long" class="ml-input-coord">
+        <label>Lon:</label>
+        <div id="txtLong">
+          Lon
+        </div>
+      </div>
+    </div>
+    <div id="ml-output-vis">
+      <label>Predicted Wildfire Intensity:</label>
+      <div id="bar-container">
+        <div id="bar-fill"></div>
+      </div>
+    </div>
+    <div id="ml-output">
+      Prediction
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+
+  <!--Load the API from the specified URL
+  * The async attribute allows the browser to render the page while the API loads
+  * The key parameter will contain your own API key (which is not needed for this tutorial)
+  * The callback parameter executes the initMap() function
+-->
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=APIKEY&callback=initMap">
+</script>
+</body>
+</html>
